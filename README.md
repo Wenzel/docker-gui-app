@@ -16,7 +16,7 @@ Shared X11 socket
 
     docker run -d \
         -e DISPLAY=$DISPLAY \
-        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
         dk-firefox
 
 
