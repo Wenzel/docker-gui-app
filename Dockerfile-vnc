@@ -1,0 +1,16 @@
+FROM ubuntu:latest
+
+RUN apt-get update
+RUN apt-get install -y x11vnc xvfb 
+RUN apt-get install -y firefox
+
+# Configure VNC
+#----------------
+RUN mkdir -p /root/.vnc
+RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
+
+# Expose default vnc port
+EXPOSE 5900
+
+ADD start.sh /root/
+ENTRYPOINT ["/root/start.sh"]
