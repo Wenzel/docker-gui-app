@@ -37,6 +37,7 @@ Once the container is started, type the following commands to
 2. Run Firefox
 3. Run the VNC Server
 
+
     Xvfb $DISPLAY -extension GLX -screen 0 1024x780x24 &
     $DISPLAY /usr/bin/firefox &
     x11vnc -usepw -display $DISPLAY
