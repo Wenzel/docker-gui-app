@@ -34,13 +34,14 @@ Then build the container (`firefox` is used as example in all Dockerfiles)
 Once the container is started, type the following commands to
 
 1. Run an `xvfb` server (X Virtual FrameBuffer)
-2. Run Firefox
-3. Run the VNC Server
+2. Run `Firefox`
+3. Run the `VNC Server`
 
-
-    Xvfb $DISPLAY -extension GLX -screen 0 1024x780x24 &
-    $DISPLAY /usr/bin/firefox &
-    x11vnc -usepw -display $DISPLAY
+~~~
+Xvfb $DISPLAY -extension GLX -screen 0 1024x780x24 &
+$DISPLAY /usr/bin/firefox &
+x11vnc -usepw -display $DISPLAY
+~~~
 
 3 - X11 Forwarding
 ------------------
